@@ -1,6 +1,7 @@
 #import library
 import cv2
 import time
+import scipy 
 
 import numpy as np
 import streamlit as st
