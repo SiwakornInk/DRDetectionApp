@@ -116,8 +116,9 @@ if input_image :
     img_bgr = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     img_rgb = circle_crop(img_bgr)
     img_rgb_resized = cv2.resize(img_rgb,(WIDE,WIDE))
-    img_rgb_resized = img_rgb_resized/255
-    st.image(img_rgb_resized, caption = 'This is your preprocessed fundus image.', width=256)
+    img_rgb_normalized = img_rgb_resized/255
+    img_rgb_preprocessed = load_ben_color(img_rgb_normalized)
+    st.image(img_rgb_preprocessed, caption = 'This is your preprocessed fundus image.', width=256)
     #img_rgb_resized  = img_rgb_resized.reshape(BATCH_SIZE,WIDE,WIDE,3)
 
     #datagen = ImageDataGenerator(rescale= 1./255, preprocessing_function=load_ben_color)
