@@ -130,10 +130,10 @@ if input_image :
         if Classes == 0 : 
             st.write("""
                         Prediction for this image : \n
-                        This image has no DR sign. You are Healthy!! 
+                        This image has no DR sign. You are healthy. 
                     """)
         else :
             st.write("""
                         Prediction for this image : \n
-                        This image has Diabetic Retinopathy. You should see the doctor for treatment ASAP.
+                        This image is suspected of Diabetic retinopathy. We recommend you make an appointment with a specialized doctor for more investigation.
                     """) 
