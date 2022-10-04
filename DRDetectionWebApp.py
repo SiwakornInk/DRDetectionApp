@@ -124,7 +124,7 @@ if input_image :
     if st.button('Click for checking the Diabetic Retinopathy'):
         with st.spinner('Predicting...'):
             time.sleep(2)
-        predict = model.predict(testdata,verbose=0)
+        predict = model.predict(testdata)
         Classes = np.argmax(predict)
         if Classes == 0 : 
             st.write("""
