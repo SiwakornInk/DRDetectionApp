@@ -116,12 +116,14 @@ if input_image :
     img_bgr = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     img_rgb = circle_crop(img_bgr)
     img_rgb_resized = cv2.resize(img_rgb,(WIDE,WIDE))
+    st.image(img_rgb_resized, caption = 'This is your preprocessed fundus image.', width=256)
     img_rgb_resized  = img_rgb_resized.reshape(BATCH_SIZE,WIDE,WIDE,3)
 
     datagen = ImageDataGenerator(rescale= 1./255, preprocessing_function=load_ben_color)
     testdata = datagen.flow(img_rgb_resized)
     
-    print(type(testdata))
+    if testdata:
+        print('ok')
    #if st.button('Click for checking the Diabetic Retinopathy'):
    #    with st.spinner('Predicting...'):
    #        time.sleep(2)
