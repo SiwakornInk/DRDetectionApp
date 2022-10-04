@@ -118,7 +118,6 @@ if input_image :
     img_rgb = cv2.resize(img_rgb,(WIDE,WIDE))
     img_rgb = load_ben_color(img_rgb)
     img_rgb = img_rgb/255
-    st.image(img_rgb, caption = 'This is your preprocessed fundus image.', width=256)
     img_rgb  = img_rgb.reshape(BATCH_SIZE,WIDE,WIDE,3)
     
     if st.button('Click for checking the Diabetic Retinopathy'):
