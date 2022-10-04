@@ -135,5 +135,5 @@ if input_image :
         else :
             st.write("""
                         Prediction for this image : \n
-                        This image is suspected of Diabetic retinopathy. We recommend you make an appointment with a specialized doctor for more investigation.
+                        This image is suspected of Diabetic Retinopathy. We recommend you make an appointment with a specialized doctor for more investigation.
                     """) 
