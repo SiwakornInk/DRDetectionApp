@@ -116,14 +116,15 @@ if input_image :
     img_bgr = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     img_rgb = circle_crop(img_bgr)
     img_rgb = cv2.resize(img_rgb,(WIDE,WIDE))
-    img_rgb = load_ben_color(img_rgb)
-    img_rgb = img_rgb/255
     img_rgb  = img_rgb.reshape(BATCH_SIZE,WIDE,WIDE,3)
+    
+    datagen = ImageDataGenerator(rescale = 1./255, preprocessing_function=load_ben_color)
+    testdata = datagen.flow(img_rgb)
     
     if st.button('Click for checking the Diabetic Retinopathy'):
         with st.spinner('Predicting...'):
             time.sleep(2)
-        predict = model.predict(img_rgb)
+        predict = model.predict(testdata)
         Classes = np.argmax(predict)
         if Classes == 0 : 
             st.write("""
