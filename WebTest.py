@@ -122,8 +122,8 @@ if input_image :
     datagen = ImageDataGenerator(rescale= 1./255, preprocessing_function=load_ben_color)
     testdata = datagen.flow(img_rgb_resized)
     
-    if testdata:
-        print('ok')
+    if not testdata:
+        print('oh no')
    #if st.button('Click for checking the Diabetic Retinopathy'):
    #    with st.spinner('Predicting...'):
    #        time.sleep(2)
