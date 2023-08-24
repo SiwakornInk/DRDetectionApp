@@ -84,15 +84,15 @@ if input_image:
         if Classes == 0:
             st.write(f"""
                 Prediction for this image: \n
-                This image has no DR sign. You are healthy. 
-                Probability of having DR: {probability_dr:.2f}
+                This image has no DR sign. You are healthy. \n
+                Probability of having DR: {probability_dr:.2f} \n
                 Probability of not having DR: {probability_no_dr:.2f}
             """)
         else:
             st.write(f"""
                 Prediction for this image: \n
-                This image is suspected of Diabetic Retinopathy. We recommend you make an appointment with a specialized doctor for more investigation. 
-                Probability of having DR: {probability_dr:.2f}
+                This image is suspected of Diabetic Retinopathy. We recommend you make an appointment with a specialized doctor for more investigation. \n
+                Probability of having DR: {probability_dr:.2f} \n
                 Probability of not having DR: {probability_no_dr:.2f}
             """)
 
