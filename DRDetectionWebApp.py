@@ -119,8 +119,3 @@ if input_image:
 
         st.write(f"Prediction for this image: {class_names[Classes]}")
         st.write(f"Probability (in percentage): {probability[Classes]:.2f}%")
-
-        # Display probabilities for all classes
-        st.write("Probabilities for all classes:")
-        for i, class_name in enumerate(class_names):
-            st.write(f"{class_name}: {probability[i]:.2f}%")
