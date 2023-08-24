@@ -117,6 +117,3 @@ st.sidebar.markdown("""
 # Deployment and additional improvements
 # ...
 
-# Run the Streamlit app
-if __name__ == '__main__':
-    st.run()
